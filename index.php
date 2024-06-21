@@ -231,7 +231,7 @@
         <?php } ?>
         <div class="form-box login">
             <h2>Login</h2>
-            <form action="login.php" method="POST">
+            <form action="includes/login.php" method="POST">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
                     <input type="email" name="email" required>
@@ -255,7 +255,7 @@
 
         <div class="form-box register">
             <h2>Registration</h2>
-            <form action="register.php" method="POST">
+            <form action="includes/register.php" method="POST">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
                     <input type="text" name="username" required>

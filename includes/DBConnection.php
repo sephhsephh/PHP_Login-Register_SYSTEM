@@ -18,4 +18,4 @@ try {
     // Handle connection error
     die("Connection failed: " . $e->getMessage());
 }
-?>
+

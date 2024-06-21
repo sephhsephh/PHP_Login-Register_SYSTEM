@@ -23,7 +23,7 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['usernam
         
         if (mysqli_stmt_num_rows($stmt) == 1) {
             // Email already exists
-            header("Location: index.php?error=Account email already exists!");
+            header("Location: ../index.php?error=Account email already exists!");
             exit();
         } else {
             // Email does not exist, insert new account
@@ -35,7 +35,7 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['usernam
                 // Attempt to execute the prepared statement
                 if (mysqli_stmt_execute($insert_stmt)) {
                     // Redirect to dashboard
-                    header("Location: dashboard.php");
+                    header("Location: ../dashboard.php");
                     exit();
                 } else {
                     echo "Oops! Something went wrong. Please try again later.";
@@ -50,7 +50,7 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['usernam
     
     mysqli_close($conn);
 } else {
-    header("Location: index.php?error=Fill out the necessary information!");
+    header("Location: ../index.php?error=Fill out the necessary information!");
     exit();
 }
 ?>
